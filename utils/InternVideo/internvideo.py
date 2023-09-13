@@ -11,7 +11,7 @@ from .simple_tokenizer import SimpleTokenizer as _Tokenizer
 from .clip_utils.model import build_model
 
 
-__all__ = ["load_model", "load_video", "tokenize"]
+__all__ = ["load_model", "load_video", "tokenize", "load_scenes"]
 _tokenizer = _Tokenizer()
 
 
@@ -20,6 +20,27 @@ def load_model(path):
     state = {k[len("clip.") :]: v for k, v in state.items() if k.startswith("clip.")}
     model = build_model(state_dict=state)
     return model
+
+
+def load_scenes(video_path, start, end):
+    video_reader = decord.VideoReader(video_path, num_threads=1, ctx=decord.cpu(0))
+    decord.bridge.set_bridge('torch')
+    video = video_reader.get_batch(np.linspace(start, end, 8).astype(np.intc)).byte()
+    video = video.permute(3, 0, 1, 2)
+    
+    input_mean = [0.48145466, 0.4578275, 0.40821073]
+    input_std = [0.26862954, 0.26130258, 0.27577711]
+    crop_size, scale_size = 224, 256
+    trans = transforms.Compose([
+        video_transform.TensorToNumpy(),
+        video_transform.Resize(scale_size),
+        video_transform.CenterCrop(crop_size),
+        video_transform.ClipToTensor(channel_nb=3),
+        video_transform.Normalize(mean=input_mean, std=input_std)
+        ])
+    
+    video = trans(video)
+    return video
 
 
 def load_video(path):
