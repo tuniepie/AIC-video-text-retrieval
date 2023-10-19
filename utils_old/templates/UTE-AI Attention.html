@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="UTE-AI Attention, width=device-width, initial-scale=1">
+	<meta name="author" content="UTE-AI Attention">
+	<meta name="description" content="UTE-AI Attention">
+	<link rel="icon" href="/static/assets/logo_lab.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/static/css/UTE-AI%20Attention.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>UTE-AI Attention</title>
+	<script src="/static/js/UTE-AI%20Attention.js"> </script>
+</head>
+<body>
+	<h1 id="menu-text"> UTE-AI Attention </h1>
+	<div id="flex-container">
+		<fieldset>
+			<legend>Search</legend>
+			<button 
+				class="tablink" 
+				data-page="BLIP" 
+				data-color="#04AA6D"
+				onclick="openPage('BLIP', this, '#04AA6D')"
+				id="defaultOpen"
+			>
+				BLIP
+			</button>
+
+			<button 
+				class="tablink" 
+				data-page="CLIP" 
+				data-color="#04AA6D"
+				onclick="openPage('CLIP', this, '#04AA6D')"
+			>
+				CLIP
+			</button>
+			
+			<button 
+				class="tablink" 
+				data-page="InternVideo" 
+				data-color="#04AA6D"
+				onclick="openPage('InternVideo', this, '#04AA6D')"
+			>
+				Intern Video
+			</button>				
+
+			<div id="BLIP" class="tabcontent">
+				<div class="search-container">					
+					<input type="text" id="inputBLIP" placeholder="Search.."><br>					
+					<button type="submit" id="searchBLIPButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="voiceBLIPButton"><i class="fa fa-microphone"></i></button>
+					<button type="submit" id="clearBLIPButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="downloadBLIPButton"><i class="fa fa-download"></i></button>
+				</div>
+			</div>
+
+			<div id="CLIP" class="tabcontent">
+				<div class="search-container">	
+					<input type="text" id="inputCLIP" placeholder="Search.."><br>	
+					<button type="submit" id="searchCLIPButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="voiceCLIPButton"><i class="fa fa-microphone"></i></button>			
+					<button type="submit" id="clearCLIPButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="downloadCLIPButton"><i class="fa fa-download"></i></button>
+				</div>
+			</div>
+
+			<div id="InternVideo" class="tabcontent">
+				<div class="search-container">					
+					<input type="text" id="inputInVField" placeholder="Search.."><br>							
+					<button type="submit" id="searchInVButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="voiceInVButton"><i class="fa fa-microphone"></i></button>
+					<button type="submit" id="clearInVButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="downloadInVButton"><i class="fa fa-download"></i></button>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+    <div id="image-container"></div>
+</body>
+</html>

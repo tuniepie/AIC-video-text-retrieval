@@ -1,0 +1,100 @@
+#menu-text{
+	color: white;
+	background-color: #04AA6D;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#flex-container{
+	display: flex;
+}
+
+
+/*****Tabs*****/
+* {	box-sizing: border-box;
+	width: 100%}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#Text_Query {background-color: #04AA6D;}
+#ASR {background-color: #04AA6D;}
+#OCR {background-color: #04AA6D;}
+#Image {background-color: #04AA6D;}
+
+/*****Search*****/
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+.search-container button {
+  float: absolute;
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  width: 10%;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+#labelImgButton {
+  color: white;
+}
+
+/* #imageButton {
+ width: 5%;
+} */
+
+#selected-image-text {
+  float: absolute;
+  font-weight: normal;  
+}
+
+#selectedImage {
+  float: absolute;
+  max-width: 25%;
+  display: none;
+  /* margin-top: 1%; */
+}

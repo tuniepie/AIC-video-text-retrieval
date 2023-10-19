@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    <button type="button" id="imageButton"><i class="fa fa-file-image-o"></i> Select Image</button>
+    <button type="button" id="clearButton"><i class="fa fa-times"></i> Clear Image</button>
+    <br>
+    <img id="selectedImage" style="max-width: 300px; display: none;">
+
+    <script>
+        function displaySelectedImage(file) {
+            var selectedImage = document.getElementById('selectedImage');
+            selectedImage.style.display = 'block';
+            selectedImage.src = URL.createObjectURL(file);
+        }
+
+        function clearSelectedImage() {
+            var selectedImage = document.getElementById('selectedImage');
+            selectedImage.style.display = 'none';
+            selectedImage.src = '';
+        }
+
+        function handleImageUpload() {
+            var imageInput = document.getElementById('imageInput');
+            var selectedFile = imageInput.files[0];
+
+            if (selectedFile) {
+                displaySelectedImage(selectedFile);
+
+                var formData = new FormData();
+                formData.append('image', selectedFile);
+
+                // Gửi dữ liệu formData đến máy chủ...
+
+                // Đặt sự kiện cho nút "Clear Image"
+                document.getElementById('clearButton').addEventListener('click', function() {
+                    clearSelectedImage();
+                });
+            }
+        }
+
+        document.getElementById('imageButton').addEventListener('click', function() {
+            document.getElementById('imageInput').click();
+        });
+
+        document.getElementById('imageInput').addEventListener('change', function() {
+            handleImageUpload();
+        });
+    </script>
+</body>
+</html>

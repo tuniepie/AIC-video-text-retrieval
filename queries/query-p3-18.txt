@@ -1,0 +1,1 @@
+Một cảnh sát giao thông đang lấy biển số xe từ một thùng chứa nhiều biển số. Biển số xe được lấy ra có số 653.7x (x không nhìn thấy rõ)   

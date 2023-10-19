@@ -1,0 +1,141 @@
+#menu-text{
+	color: white;
+	background-color: #04AA6D;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+#flex-container{
+	display: flex;
+}
+
+
+/*****Tabs*****/
+* {	box-sizing: border-box;
+	width: 100%}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: calc(100% / 3);
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#BLIP {background-color: #04AA6D;}
+#CLIP {background-color: #04AA6D;}
+#InternVideo {background-color: #04AA6D;}
+
+/*****Search*****/
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+.search-container button {
+  float: absolute;
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  width: 10%;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+#labelImgButton {
+  color: white;
+}
+
+#selected-image-text {
+  float: absolute;
+  font-weight: normal;  
+}
+
+.image-container {
+  position: relative;
+  display: inline-flex;
+  padding: 3px;
+  width: 20%;
+  height: auto;
+}
+
+.responsive-image {
+  max-width: auto; /* Đảm bảo ảnh không tràn ra ngoài .image-container */
+  height: auto;
+}
+
+.image-button-pick {
+  position: absolute;
+  top: 2.5%; /* Điều chỉnh khoảng cách từ phía trên của ảnh */
+  left: 1.5%; /* Điều chỉnh khoảng cách từ phía trái của ảnh */
+  height: 10%; /* Kích thước nút bằng với .image-container */
+  width: 10%; /* Kích thước nút bằng với .image-container */
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 50%;
+}
+
+.image-button-pick:hover {
+  background: #ccc;
+}
+
+.image-button-add {
+  position: absolute;
+  top: 2.5%; /* Điều chỉnh khoảng cách từ phía trên của ảnh */
+  left: 12%; /* Điều chỉnh khoảng cách từ phía trái của ảnh */
+  height: 10%; /* Kích thước nút bằng với .image-container */
+  width: 10%; /* Kích thước nút bằng với .image-container */
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 50%;
+}
+
+.image-button-add:hover {
+  background: #ccc;
+}
+
+.button1-clicked {
+  background-color: #04AA6D;
+  color: white;
+}
+

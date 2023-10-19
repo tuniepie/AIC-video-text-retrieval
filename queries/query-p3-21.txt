@@ -1,0 +1,1 @@
+Cảnh quay những trang giấy được in ra từ ảnh chụp của ứng dụng Messenger. Tuy nhiên nội dung đã bị che đi, chỉ biết có một ảnh chụp màn hình của một ứng dụng ngân hàng trong những trang này.

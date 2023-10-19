@@ -1,0 +1,1 @@
+Đoạn tin về một cuộc thi vẽ. Những người trong cuộc thi vẽ đa số dùng mực màu xanh và vẽ trên các khối 3D có hình dấu cộng "+" hoặc "x". 

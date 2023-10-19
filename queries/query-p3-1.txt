@@ -1,0 +1,1 @@
+Đoạn video có một dãy các thanh đèn led xếp thành hàng ngang, các thanh đèn có màu khác nhau, được dựng đứng. Một người phụ nữ thực hiện động tác giống như gõ lên phía trên thanh đèn thì thanh đèn đó sẽ phát sáng.

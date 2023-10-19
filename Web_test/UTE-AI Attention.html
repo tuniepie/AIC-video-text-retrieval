@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="UTE-AI Attention, width=device-width, initial-scale=1">
+	<meta name="author" content="UTE-AI Attention">
+	<meta name="description" content="UTE-AI Attention">
+	<link rel="stylesheet" href="css/UTE-AI Attention.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>UTE-AI Attention</title>
+	<script src="js/UTE-AI Attention.js"> </script>
+</head>
+<body>
+	<h1 id="menu-text"> UTE-AI Attention </h1>
+	<div id="flex-container">
+		<fieldset>
+			<legend>Search</legend>
+			<button 
+				class="tablink" 
+				data-page="Text_Query" 
+				data-color="#04AA6D"
+				onclick="openPage('Text_Query', this, '#04AA6D')"
+				id="defaultOpen"
+			>
+				Text
+			</button>
+
+			<button 
+				class="tablink" 
+				data-page="ASR" 
+				data-color="#04AA6D"
+				onclick="openPage('ASR', this, '#04AA6D')"
+			>
+				ASR
+			</button>
+			
+			<button 
+				class="tablink" 
+				data-page="OCR" 
+				data-color="#04AA6D"
+				onclick="openPage('OCR', this, '#04AA6D')"
+			>
+				OCR
+			</button>				
+
+			<button 
+				class="tablink" 
+				data-page="Image" 
+				data-color="#04AA6D"
+				onclick="openPage('Image', this, '#04AA6D')"
+			>
+				Image
+			</button>	
+
+			<div id="Text_Query" class="tabcontent">
+				<div class="search-container">					
+					<input type="text" id="inputTextField" placeholder="Search.."><br>					
+					<button type="submit" id="searchTextButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="clearTextButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="submitTextButton"><i class="fa fa-paper-plane"></i></button>
+				</div>
+			</div>
+
+			<div id="ASR" class="tabcontent">
+				<div class="search-container">	
+					<input type="text" id="inputASRField" placeholder="Search.."><br>	
+					<button type="submit" id="voiceButton"><i class="fa fa-microphone"></i></button>				
+					<button type="submit" id="searchASRButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="clearASRButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="submitASRButton"><i class="fa fa-paper-plane"></i></button>
+				</div>
+			</div>
+
+			<div id="OCR" class="tabcontent">
+				<div class="search-container">					
+					<input type="text" id="inputOCRField" placeholder="Search.."><br>					
+					<button type="submit" id="searchOCRButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="clearOCRButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="submitOCRButton"><i class="fa fa-paper-plane"></i></button>
+				</div>
+			</div>
+
+			<div id="Image" class="tabcontent">
+				<div class="search-container">
+					<!-- <label for="imgButton" id="labelImgButton">Select image: </label> -->
+					<input type="file" id="imageInput" accept="image/*" style="display: none;">
+					<button type="button" id="imageButton"><i class="fa fa-file-image-o"></i></button>
+					<button type="submit" id="searchImageButton"><i class="fa fa-search"></i></button>
+					<button type="submit" id="clearImageButton"><i class="fa fa-times"></i></button>
+					<button type="submit" id="submitImageButton"><i class="fa fa-paper-plane"></i></button>
+					<h3 id="selected-image-text" >Selected Image: </h3>
+					<img id="selectedImage">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</body>
+</html>
